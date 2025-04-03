@@ -1,0 +1,25 @@
+/* :root{
+    --green: #25A59E;
+    --neutral:#262626;
+    --orange:#EE8F39;
+}; */
+
+/* .logo{
+    width: 100%;
+    height: auto;
+} */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+g
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+
+}
