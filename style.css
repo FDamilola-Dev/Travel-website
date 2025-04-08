@@ -17,8 +17,7 @@ body {
     width:100%
 }
 
-
-nav {
+.wrapper {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,26 +25,41 @@ nav {
     padding: 16px 20px;
 }
 
-/* .heroImage{
+.container {
     display: flex;
-    justify-content: center;
-    height: auto;
-    width:100%;
-    margin: 7rem;
-    flex-wrap: wrap;
-    background-color: blueviolet;
-
-
-
-    } */
-
-
-/* .text{
-    padding-left:50px ;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 7rem;
+    position: relative;
 }
-h1{
-    font-family: "Gilda";
-font-size: 60px;
-line-height: 48px;
+.blur {
+    /* border: 2px solid red; */
+    position: absolute;
+  }
 
-} */
+ .eclipse {
+    position: absolute;
+    /* border: 2px solid gold; */
+    bottom: -11.6rem;
+  }
+
+.heroImage {
+    /* border:2px solid palevioletred; */
+    position: absolute;
+    top:7.75rem;
+    
+} 
+
+h1 {
+    font-family: "Gilda display";
+    /* border: 2px solid gold; */
+    text-align: center;
+    font-weight: 400;
+    font-size: 52px;
+    margin-top: -1rem;
+}
+
+span {
+    color:#25A59E ;
+}
