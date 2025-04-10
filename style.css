@@ -4,20 +4,20 @@
     --orange:#EE8F39;
 }; */
 
-/* .logo{
-    width: 100%;
-    height: auto;
-} */
 body {
-    background-color: #f4f4f4;
-    /* font-family: "Gilda"; */
+    /* background-color:#FFFFFF; */
     margin: 0;
-    padding: 0;
+    padding:20px;
     height: 100vh;
     width:100%
 }
 
-.wrapper {
+.container {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 25%, rgba(242,242,242,1) 93%);
+
+}
+
+.header-wrapper {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,41 +25,110 @@ body {
     padding: 16px 20px;
 }
 
-.container {
+.hero-container {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    margin-top: 7rem;
     position: relative;
+    /* border: 2px solid black; */
 }
 .blur {
     /* border: 2px solid red; */
     position: absolute;
+    top: 5.2rem;
   }
 
  .eclipse {
     position: absolute;
     /* border: 2px solid gold; */
-    bottom: -11.6rem;
+    top: 14.7rem
   }
 
 .heroImage {
     /* border:2px solid palevioletred; */
     position: absolute;
-    top:7.75rem;
+    top:12.7rem;
     
 } 
 
-h1 {
+h1.hero {
     font-family: "Gilda display";
     /* border: 2px solid gold; */
     text-align: center;
-    font-weight: 400;
+    font-weight:400;
     font-size: 52px;
-    margin-top: -1rem;
+    margin-top: 5rem;
 }
 
 span {
     color:#25A59E ;
 }
+
+/* to be asked */
+.aboutSection {
+    padding-top:14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -10px;
+    /* border: 2px solid gold; */
+
+
+}
+
+.text {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+
+}
+.aboutSection .text h1{
+    font-family: "Gilda display";
+    font-weight:400;
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.aboutSection .text p{
+    font-family: "urbanist";
+    font-size: 16px;
+    font-weight:400;
+    /* margin-top: 0px; */
+    
+    }
+
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: "urbanist";
+        padding: 10px 16px 32px 16px;
+        /* border: 1px solid red; */
+        background-color: #ffffff
+        ;
+    }
+
+    figcaption {
+        display: flex;
+        flex-direction:row;
+        gap: 8px;
+        /* border: 2px solid red; */
+    }
+
+    figcaption:nth-child(2){
+    /* border: 2px solid black; */
+    font-weight: 700;
+    font-size: 24px;
+    color: #262626;
+    }
+
+    figcaption:nth-child(3){
+        /* border: 2px solid black; */
+        font-weight: 600;
+        font-size: 18px;
+        color:#333333;
+        }
