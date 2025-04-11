@@ -5,130 +5,403 @@
 }; */
 
 body {
-    /* background-color:#FFFFFF; */
-    margin: 0;
-    padding:20px;
-    height: 100vh;
-    width:100%
+  /* background-color:#FFFFFF; */
+  margin: 0;
+  padding: 20px;
+  /* height: 100vh; */
+  width: 100%;
 }
 
 .container {
-    background: linear-gradient(to bottom, rgba(255,255,255,1) 25%, rgba(242,242,242,1) 93%);
-
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(242, 242, 242, 1) 93%
+  );
+  /* width: 375px; */
 }
 
 .header-wrapper {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
 }
 
-.hero-container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    position: relative;
-    /* border: 2px solid black; */
+.hero-container1 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  /* width: 100%; */
+  @media screen and (min-width: 1024px) {
+    /* display: none; */
+  }
+  /* border: 2px solid black; */
 }
+
+.hero-container2 {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    /* display: block; */
+  }
+}
+
 .blur {
-    /* border: 2px solid red; */
-    position: absolute;
-    top: 5.2rem;
-  }
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 5.2rem;
+}
 
- .eclipse {
-    position: absolute;
-    /* border: 2px solid gold; */
-    top: 14.7rem
-  }
+.eclipse {
+  position: absolute;
+  /* border: 2px solid gold; */
+  top: 14.7rem;
+}
 
 .heroImage {
-    /* border:2px solid palevioletred; */
-    position: absolute;
-    top:12.7rem;
-    
-} 
+  /* border:2px solid palevioletred; */
+  position: absolute;
+  top: 12.7rem;
+}
 
 h1.hero {
-    font-family: "Gilda display";
-    /* border: 2px solid gold; */
-    text-align: center;
-    font-weight:400;
-    font-size: 52px;
-    margin-top: 5rem;
+  font-family: "Gilda display";
+  /* border: 2px solid gold; */
+  text-align: center;
+  font-weight: 400;
+  font-size: 52px;
+  margin-top: 5rem;
 }
 
 span {
-    color:#25A59E ;
+  color: #25a59e;
 }
 
 /* to be asked */
 .aboutSection {
-    padding-top:14rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: -10px;
-    /* border: 2px solid gold; */
-
-
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: -10px;
+  /* border: 2px solid gold; */
 }
 
 .text {
-    /* border: 2px solid black; */
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 12px;
-
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
 }
-.aboutSection .text h1{
-    font-family: "Gilda display";
-    font-weight:400;
-    font-size: 40px;
-    margin-bottom: 6px;
+.aboutSection .text h1 {
+  font-family: "Gilda display";
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 6px;
 }
 
-.aboutSection .text p{
-    font-family: "urbanist";
-    font-size: 16px;
-    font-weight:400;
-    /* margin-top: 0px; */
-    
-    }
+.aboutSection .text p {
+  font-family: "urbanist";
+  font-size: 16px;
+  font-weight: 400;
+  /* margin-top: 0px; */
+}
 
+.aboutImages {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  justify-content: center;
 
-    figure {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        font-family: "urbanist";
-        padding: 10px 16px 32px 16px;
-        /* border: 1px solid red; */
-        background-color: #ffffff
-        ;
-    }
+  @media screen and (min-width: 740px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    figcaption {
-        display: flex;
-        flex-direction:row;
-        gap: 8px;
-        /* border: 2px solid red; */
-    }
+  @media screen and (min-width: 1280px) {
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+}
 
-    figcaption:nth-child(2){
-    /* border: 2px solid black; */
-    font-weight: 700;
-    font-size: 24px;
-    color: #262626;
-    }
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "urbanist";
+  margin: 0;
+  /* padding: 10px 16px 32px 16px; */
+  /* border: 1px solid red; */
+  background-color: #ffffff;
+}
 
-    figcaption:nth-child(3){
-        /* border: 2px solid black; */
-        font-weight: 600;
-        font-size: 18px;
-        color:#333333;
-        }
+figure > img {
+  @media screen and (min-width: 740px) {
+    width: 338px;
+  }
+}
+
+figcaption {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  /* border: 2px solid red; */
+}
+
+figcaption:nth-child(2) {
+  /* border: 2px solid black; */
+  font-weight: 700;
+  font-size: 24px;
+  color: #262626;
+}
+
+figcaption:nth-child(3) {
+  /* border: 2px solid black; */
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+
+.choose {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooseText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+.chooseText h2 {
+  /* border: 2px solid pink; */
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #262626;
+  max-width: 320px;
+  text-align: center;
+  line-height: 52px;
+
+  @media screen and (min-width: 1024px) {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.chooseText p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* border: 2px solid black; */
+  margin-top: 0px;
+  color: #595959;
+}
+
+.listCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cardOne {
+  padding: 28px 20px 32px 20px;
+  border-top: 4px solid #25a59e;
+  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
+}
+
+.cardOne h2 {
+  font-family: "Gilda display";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.cardOne p:nth-child(2) {
+  font-family: "Urbanist";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #737373;
+  margin-top: 0px;
+}
+
+.cardOne p:nth-child(3) {
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: #25a59e;
+  text-align: end;
+  border: 0.2px;
+}
+
+.cardTwo {
+  background-color: #25a59e;
+  color: #ffffff;
+  padding: 28px 20px 32px 20px;
+  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
+}
+
+.cardTwo h2 {
+  font-family: "Gilda display";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 8px;
+}
+
+.cardTwo p:nth-child(2) {
+  font-family: "Urbanist";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 0px;
+}
+
+.cardTwo p:nth-child(3) {
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: end;
+  border: 0.2px;
+}
+
+.cardThree {
+  padding: 28px 20px 32px 20px;
+  border-top: 4px solid #25a59e;
+  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
+  color: #262626;
+}
+
+.cardThree h2 {
+  font-family: "Gilda display";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.cardThree p:nth-child(2) {
+  font-family: "Urbanist";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #737373;
+  margin-top: 0px;
+}
+
+.cardThree p:nth-child(3) {
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: #25a59e;
+  text-align: end;
+  border: 0.2px;
+}
+
+.footCta {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gold;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 80px;
+}
+.footCtaText {
+  text-align: left;
+}
+
+.footCtaText h2 {
+  font-family: "Gilda display";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #262626;
+  margin-bottom: 8px;
+
+  margin-top: 0px;
+}
+
+.footCtaText p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  margin-top: 0px;
+}
+
+.documentary {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.documentary h2 {
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #262626;
+  margin-bottom: 0px;
+}
+
+.cta {
+  /* background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: left; */
+  /* padding-right: 20px;
+  padding-left: 20px;
+  gap: 10px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d9d9d9;
+  gap: 42px;  */
+}
+
+.cta h2 {
+  font-family: "Gilda Display";
+
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: #25a59e;
+  color: #ffffff;
+  font-family: "Urbanist";
+  font-weight: 400;
+  font-size: 18px;
+  height: 54px;
+  width: 147px;
+  padding: 16px 32px;
+  border: transparent;
+  border-radius: 1px;
+}
