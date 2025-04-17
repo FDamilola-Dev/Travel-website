@@ -122,7 +122,7 @@ span {
 }
 
 .text {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -534,6 +534,7 @@ figcaption:nth-child(3) {
     justify-content: space-around;
     align-items: center;
     gap: 48px;
+    width: 100vw;
   }
 }
 
@@ -579,11 +580,13 @@ button {
 }
 
 .LogoIcons2 {
-  width: 313px;
+  /* width: 313px; */
   font-size: 18px;
   line-height: 32px;
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
+  /* justify-content: space-between; */
+  align-items: flex-end;
   /* border: 2px solid red; */
 @media (max-width:894px){
 display: none;
@@ -591,19 +594,30 @@ display: none;
 }
 
 .logo-text {
-  border: 2px solid gold;
+  /* border: 2px solid gold; */
 
   @media (max-width:894px){
   width:335px;
 
+}}
+
+.LogoIcons-SocialIcons {
+  /* border: 2px solid purple; */
+
+  @media (min-width:1280px) {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
 }
 
-.socialsIcons {
+.socialsIcons{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
-  /* gap:10px; */
+  gap:12px;
+  /* border: 2px solid black; */
 
   @media (min-width:1280px) {
     display: none;
@@ -613,7 +627,7 @@ display: none;
 .socialIcons2 {
   display: flex;
   flex-direction:row;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   justify-content:flex-start;
   align-items: center;
   gap: 32px;
@@ -631,8 +645,15 @@ display: none;
 }
 
 
+.footerMenu {
+  border: 2px solid purple;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
-.footerMenu > ul {
+.footerMenu > ul  {
   /* border: 2px solid black; */
   font-family: "Urbanist";
   font-weight: 600;
@@ -643,6 +664,9 @@ display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* gap: 20px; */
   color: #595959;
 
   @media (min-width:1280px) {
@@ -651,16 +675,25 @@ display: none;
   }
 }
 
+.footerMenu > ul> li {
+  /* border:2px solid #25a59e; */
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
 .logo-FooterWrapper {
   /* border: 2px solid black; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 28px;
   
+
+  @media (min-width:1280px) {
+    display: block;
+
+  }
 }
 
-.footerMenu {
-  align-self: flex-end;
-  gap: 40px;
-}
