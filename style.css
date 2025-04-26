@@ -159,7 +159,9 @@ figure {
   box-shadow: 50.41px 50.41px 98px 0px rgba(55, 54, 100, 0.039);
 }
 
-
+figure > img {
+  border: 2px solid gold;
+}
 
 @media screen and (min-width: 740px) {
   figure > img {
@@ -460,7 +462,7 @@ figcaption:nth-child(3) {
   padding-right: 20px;
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .cta {
     flex-direction: row;
     justify-content: space-between;
@@ -469,7 +471,7 @@ figcaption:nth-child(3) {
     width: auto;
     padding: 0;
   }
-}
+} */
 
 .cta h2 {
   font-family: "Gilda Display";
@@ -507,13 +509,13 @@ figcaption:nth-child(3) {
   padding-right: 20px;
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .logo-FooterWrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
-}
+} */
 
 button {
   background-color: var(--green);
@@ -564,7 +566,7 @@ button:hover {
 .LogoIcons2 {
   display: none;
 }
-
+/* 
 @media (min-width: 1280px) {
   .LogoIcons {
     display: none;
@@ -577,7 +579,7 @@ button:hover {
     flex-direction: row;
     align-items: flex-start;
   }
-}
+} */
 
 .LogoIcons-SocialIcons {
   display: flex;
@@ -585,11 +587,11 @@ button:hover {
   gap: 24px;
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .LogoIcons-SocialIcons {
     gap: 48px;
   }
-}
+} */
 
 .socialsIcons {
   display: flex;
@@ -639,9 +641,10 @@ button:hover {
 .footerMenu li:hover {
   color: var(--green);
 }
-@media (min-width: 1280px) {
+
+/* @media (min-width: 1280px) {
   .footerMenu {
     justify-content: flex-end;
-    gap: 40px;
+    gap:40px;
 }
-}
+} */
