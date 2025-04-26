@@ -97,6 +97,11 @@ Simply navigate using the menu bars and links
 Screenshot ![Screenshot 2025-04-26 031250](https://github.com/user-attachments/assets/077eadeb-9581-43a6-a719-ad10172a9bfb)
 ![Screenshot 2](https://github.com/user-attachments/assets/a31b9eba-25c3-4153-9165-13253539036e)
 
+
+## Loom video link 
+https://www.loom.com/share/3f2a6dc9160e42c6851e25ef5ae48255?sid=001bf9ed-d164-4ff6-94d1-293aedfcd2f8 
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
