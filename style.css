@@ -159,9 +159,6 @@ figure {
   box-shadow: 50.41px 50.41px 98px 0px rgba(55, 54, 100, 0.039);
 }
 
-figure > img {
-  border: 2px solid gold;
-}
 
 @media screen and (min-width: 740px) {
   figure > img {
