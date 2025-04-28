@@ -1,30 +1,27 @@
-/* :root{
-    --green: #25A59E;
-    --neutral:#262626;
-    --orange:#EE8F39;
-}; */
-
-body {
-  /* background-color:#FFFFFF; */
-  margin: 0;
-  padding: 20px;
-  /* height: 100vh; */
-  width: 100%;
-  box-sizing: border-box;
-
-  @media (min-width: 1280px) {
-    padding-right: 120px;
-    padding-left: 120px;
-  }
+:root {
+  --green: #25A59E;
+  --neutral: #262626;
+  --orange: #EE8F39;
+  --text-color: #595959;
+  --light-text: #737373;
+  --dark-text: #333333;
+  --white: #ffffff;
 }
 
-.container {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 25%,
-    rgba(242, 242, 242, 1) 93%
-  );
-  /* width: 375px; */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+@media (min-width: 1280px) {
+  body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .header-wrapper {
@@ -41,23 +38,26 @@ body {
   justify-items: center;
   align-items: center;
   position: relative;
-  /* width: 100%; */
-  @media screen and (min-width: 894px) {
+}
+
+@media screen and (min-width: 894px) {
+  .hero-container1 {
     display: none;
   }
-  /* border: 2px solid black; */
 }
 
 .hero-container2 {
-  /* width: 1340px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
   margin-top: 100px;
-  @media screen and (max-width: 1280px) {
-    display: none;
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-container2 {
+    display: flex;
   }
 }
 
@@ -67,77 +67,70 @@ body {
   font-size: 170px;
   font-weight: 400;
   line-height: 170px;
-  border: 2px solid 
-  gold;
   text-align: center;
-
 }
+
 .blur {
-  /* border: 2px solid red; */
   position: absolute;
   top: 5.2rem;
 }
 
 .eclipse {
   position: absolute;
-  /* border: 2px solid gold; */
   top: 14.7rem;
 }
 
 .heroImage {
-  /* border:2px solid palevioletred; */
   position: absolute;
   top: 12.7rem;
 }
 
-.hero-container1 >h1 {
+.hero-container1 > h1 {
   font-family: "Gilda display";
-  /* border: 2px solid black; */
   text-align: center;
   font-weight: 400;
   font-size: 52px;
   margin-top: 5rem;
-
-  @media screen and (min-width: 894px) {
-    display: none;
-  }
 }
 
 span {
-  color: #25a59e;
+  color: var(--green);
 }
 
-/* to be asked */
 .aboutSection {
-  padding-top: 14rem;
+  padding-top: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: -10px;
-  /* border: 2px solid gold; */
-  padding-bottom: 100px;
 }
 
 .text {
-  /* border: 2px solid black; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  text-wrap: no-wrap;
+  gap: 12px;
 }
+
 .aboutSection .text h1 {
   font-family: "Gilda display";
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
-  margin-bottom: 6px;
+  margin: 0;
 }
 
 .aboutSection .text p {
   font-family: "urbanist";
   font-size: 16px;
   font-weight: 400;
-  /* margin-top: 0px; */
+  margin: 0;
 }
 
 .aboutImages {
@@ -145,15 +138,10 @@ span {
   flex-direction: column;
   gap: 36px;
   justify-content: center;
+}
 
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: 1280px) {
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
+@media screen and (min-width: 1280px) {
+  .aboutImages {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
@@ -166,13 +154,14 @@ figure {
   gap: 20px;
   font-family: "urbanist";
   margin: 0;
-  /* padding: 10px 16px 32px 16px; */
-  /* border: 1px solid red; */
-  background-color: #ffffff;
+  padding: 16px 16px 0px 16px;
+  border: 1px #f2f2f2;
+  box-shadow: 50.41px 50.41px 98px 0px rgba(55, 54, 100, 0.039);
 }
 
-figure > img {
-  @media screen and (min-width: 740px) {
+
+@media screen and (min-width: 740px) {
+  figure > img {
     width: 338px;
   }
 }
@@ -181,31 +170,30 @@ figcaption {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  /* border: 2px solid red; */
 }
 
 figcaption:nth-child(2) {
-  /* border: 2px solid black; */
   font-weight: 700;
   font-size: 24px;
-  color: #262626;
+  color: var(--neutral);
 }
 
 figcaption:nth-child(3) {
-  /* border: 2px solid black; */
   font-weight: 600;
   font-size: 18px;
-  color: #333333;
+  color: var(--dark-text);
 }
 
 .choose {
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
   gap: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 65px;
 }
 
 .chooseText {
@@ -213,23 +201,21 @@ figcaption:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
-
-  @media (min-width: 1280px) {
-  }
 }
+
 .chooseText h2 {
-  /* border: 2px solid pink; */
   font-family: "Gilda Display";
   font-weight: 400;
   font-size: 40px;
   margin-bottom: 12px;
-  color: #262626;
+  color: var(--neutral);
   max-width: 320px;
   text-align: center;
   line-height: 52px;
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
+  .chooseText h2 {
     max-width: unset;
     width: 100%;
     font-size: 72px;
@@ -242,14 +228,14 @@ figcaption:nth-child(3) {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  /* border: 2px solid black; */
-  margin-top: 0px;
-  color: #595959;
+  margin-top: 0;
+  color: var(--text-color);
+}
 
-  @media (min-width: 1280px) {
+@media (min-width: 1280px) {
+  .chooseText p {
     font-size: 18px;
     line-height: 32px;
-    /* border: 2px solid purple; */
     text-align: center;
   }
 }
@@ -258,61 +244,44 @@ figcaption:nth-child(3) {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
 
-  @media (min-width: 1280px) {
-    display: flex;
+@media (min-width: 1280px) {
+  .listCards {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.cardOne {
+.cardOne, .cardThree {
   padding: 28px 20px 32px 20px;
-  border-top: 4px solid #25a59e;
+  border-top: 4px solid var(--green);
+  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
+  color: var(--neutral);
+}
+
+.cardTwo {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 28px 20px 32px 20px;
   box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
 }
 
-.cardOne h2 {
+.cardOne h2, .cardThree h2, .cardTwo h2 {
   font-family: "Gilda display";
   font-weight: 500;
   font-size: 28px;
   line-height: 40px;
-  color: #262626;
   margin-bottom: 8px;
 }
 
-.cardOne p:nth-child(2) {
+.cardOne p:nth-child(2), .cardThree p:nth-child(2) {
   font-family: "Urbanist";
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
-  color: #737373;
-  margin-top: 0px;
-}
-
-.cardOne p:nth-child(3) {
-  font-family: "Gilda Display";
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 23px;
-  color: #25a59e;
-  text-align: end;
-  border: 0.2px;
-}
-
-.cardTwo {
-  background-color: #25a59e;
-  color: #ffffff;
-  padding: 28px 20px 32px 20px;
-  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
-}
-
-.cardTwo h2 {
-  font-family: "Gilda display";
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 40px;
-  margin-bottom: 8px;
+  color: var(--light-text);
+  margin-top: 0;
 }
 
 .cardTwo p:nth-child(2) {
@@ -320,7 +289,16 @@ figcaption:nth-child(3) {
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
-  margin-top: 0px;
+  margin-top: 0;
+}
+
+.cardOne p:nth-child(3), .cardThree p:nth-child(3) {
+  font-family: "Gilda Display";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--green);
+  text-align: end;
 }
 
 .cardTwo p:nth-child(3) {
@@ -329,59 +307,21 @@ figcaption:nth-child(3) {
   font-size: 16px;
   line-height: 23px;
   text-align: end;
-  border: 0.2px;
 }
 
-.cardThree {
-  padding: 28px 20px 32px 20px;
-  border-top: 4px solid #25a59e;
-  box-shadow: 10px 26px 150px 0 rgba(67, 67, 100, 0.1);
-  color: #262626;
-}
-
-.cardThree h2 {
-  font-family: "Gilda display";
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 40px;
-  color: #262626;
-  margin-bottom: 8px;
-}
-
-.cardThree p:nth-child(2) {
-  font-family: "Urbanist";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
-  color: #737373;
-  margin-top: 0px;
-}
-
-.cardThree p:nth-child(3) {
-  font-family: "Gilda Display";
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 23px;
-  color: #25a59e;
-  text-align: end;
-  border: 0.2px;
+.footCtaSection {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .footCta {
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  border: 2px solid gold;
   justify-content: center;
   align-items: center;
   gap: 28px;
   margin-top: 80px;
-}
-
-@media (min-width: 1280px) {
-  .footCta {
-    display: none;
-  }
 }
 
 .footCta2 {
@@ -389,23 +329,23 @@ figcaption:nth-child(3) {
 }
 
 @media (min-width: 1280px) {
+  .footCta {
+    display: none;
+  }
+  
   .footCta2 {
-    background-color: #ffffff;
+    background-color: var(--white);
     display: flex;
-    flex-direction: row; /* or column if you prefer */
-    border: 2px solid gold;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 28px;
     margin-top: 80px;
   }
 }
+
 .footCtaText {
   text-align: left;
-
-  @media (min-width: 1280px) {
-    /* text-wrap: wrap; */
-  }
 }
 
 .footCtaText h2 {
@@ -413,12 +353,13 @@ figcaption:nth-child(3) {
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
-  color: #262626;
+  color: var(--neutral);
   margin-bottom: 8px;
-  margin-top: 0px;
+  margin-top: 0;
+}
 
-  @media (min-width: 1280px) {
-    /* text-wrap: wrap; */
+@media (min-width: 1280px) {
+  .footCtaText h2 {
     font-size: 72px;
     line-height: 84px;
   }
@@ -429,121 +370,135 @@ figcaption:nth-child(3) {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #595959;
-  margin-top: 0px;
-  /* border: 2px solid black; */
+  color: var(--text-color);
+  margin-top: 0;
+}
 
-  @media (min-width: 1280px) {
+@media (min-width: 1280px) {
+  .footCtaText p {
     font-size: 18px;
     line-height: 32px;
   }
 }
 
-.footCtaImg {
-  @media (max-width: 600px) {
-    /* display:none; */
-    border: 2px solid purple;
+.footCtaImg2 {
+  display: flex;
+}
+
+@media (min-width: 1023px) {
+  .footCtaImg2 {
+    display: none;
   }
 }
 
-.footCtaImg2 {
-  @media (min-width: 1023px) {
-    display: none;
-  }
-  display: flex;
-}
 .documentary {
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  @media screen and (min-width: 894px) {
-    display: none;
-  }
-}
-
-.documentary > img {
-  width: 100vw;
-  overflow: hidden;
-  height: 100%;
-  object-fit: cover;
-  transform: translateX(-20px);
-}
-
-.documentary2 > img {
-  width: 100vw;
-  overflow: hidden;
-  height: 100%;
-  object-fit: cover;
-  transform: translateX(-20px);
 }
 
 .documentary2 {
-  @media screen and (min-width: 1280px) {
+  display: none;
+}
+
+@media screen and (min-width: 894px) {
+  .documentary {
+    display: none;
+  }
+  
+  .documentary2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 72px;
-    /* line-height: 84px; */
     text-align: center;
-    /* border: 2px solid pink; */
     font-family: "Gilda display";
-  }
-
-  @media screen and (max-width: 894px) {
-    display: none !important;
   }
 }
 
-.documentary h2 {
+.documentary > img, .documentary2 > img {
+  width: 100vw;
+  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
+}
+
+.documentary h2, .documentary2 h2 {
   font-family: "Gilda Display";
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  color: #262626;
-  margin-bottom: 0px;
+  color: var(--neutral);
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ctaSection {
+  padding-bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .cta {
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
   gap: 16px;
-
-  @media (min-width: 1280px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 48px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
 
 .cta h2 {
   font-family: "Gilda Display";
-
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
-  /* margin-bottom: 8px; */
+  margin-bottom: 0 !important;
+}
 
-  @media (min-width: 1280px) {
+@media (min-width: 1280px) {
+  .cta h2 {
     font-size: 72px;
     line-height: 84px;
   }
 }
 
+.border-section {
+  width: 100vw !important;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-bottom: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-FooterWrapper {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 button {
-  background-color: #25a59e;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
   font-family: "Urbanist";
   font-weight: 400;
   font-size: 15px;
@@ -552,40 +507,74 @@ button {
   padding: 16px 32px;
   border: transparent;
   border-radius: 1px;
-  /* margin-bottom: 30px; */
-
-  @media (min-width: 1280px) {
-    /* display:flex ; */
-    /* justify-content: center; */
-    /* align-items: center; */
-  }
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+button:hover {
+  background-color: #1e8c86;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo-text img {
+  width: 57px;
+}
+
+.logo-text p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  margin: 0;
+  text-align: left;
+}
+
+.LogoIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.LogoIcons2 {
+  display: none;
+}
+
+
+.LogoIcons-SocialIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .socialsIcons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  /* gap:10px; */
+  gap: 12px;
+  width: 100%;
 }
 
-.socialsIcons > img {
-  /* border: 2px solid black; */
-  height: 40px;
-  width: 40px;
+.socialIcons2 {
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* gap: 12px; */
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
 }
 
-.footerMenu > ul {
-  /* border: 2px solid black; */
-  font-family: "Urbanist";
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  list-style-type: none;
+.socialsIcons div, .socialIcons2 div {
+  cursor: pointer;
+}
+
+.footerMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -612,6 +601,4 @@ button {
 .footerMenu li:hover {
   color: var(--green);
 }
-
-
 
