@@ -116,9 +116,8 @@ span {
   justify-content: center;
   align-items: center;
   text-align: left;
-  text-wrap: no-wrap;
   gap: 12px;
-  margin-top: 100px;
+  margin-top: 150px;
 
 }
 
@@ -205,12 +204,13 @@ figcaption:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .chooseText h2 {
   font-family: "Gilda Display";
   font-weight: 400;
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 12px;
   color: var(--neutral);
   max-width: 320px;
@@ -349,7 +349,7 @@ figcaption:nth-child(3) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 28px;
+    /* gap: 28px; */
     margin-top: 80px;
   }
 }
@@ -372,6 +372,7 @@ figcaption:nth-child(3) {
   .footCtaText h2 {
     font-size: 72px;
     line-height: 84px;
+  
   }
 }
 
@@ -395,11 +396,6 @@ figcaption:nth-child(3) {
   display: flex;
 }
 
-/* @media (min-width: 1280px) {
-  .footCtaImg2 {
-    display: none;
-  }
-} */
 
 .documentary {
   background-color: var(--white);
@@ -447,6 +443,15 @@ figcaption:nth-child(3) {
   margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width:1280px) {
+    font-weight: 400;
+        font-size: 72px;
+        line-height: 84px;
+        text-align: center;
+        width: 680px;
+    
+  }
 }
 
 .ctaSection {
@@ -467,6 +472,12 @@ figcaption:nth-child(3) {
   gap: 16px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width:1280px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: start;
+  }
 }
 
 
@@ -485,6 +496,11 @@ figcaption:nth-child(3) {
   }
 }
 
+.button {
+  @media (min-width:1280px){
+  margin-top: 70px;}
+}
+
 .border-section {
   width: 100vw !important;
   height: 1px;
@@ -499,11 +515,16 @@ figcaption:nth-child(3) {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 28px;
+  justify-content: flex-end;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width:1280px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 button {
@@ -545,15 +566,32 @@ button:hover {
   text-align: left;
 }
 
-.LogoIcons {
+.logo-text2  p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text-color);
+  margin: 0;
+  text-align: left;
+}
+
+
+.LogoIcons{
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 100%;
+  width: 313px;
+
+  @media(min-width:894px) {
+    display: none;
+  }
 }
 
 .LogoIcons2 {
-  display: none;
+  width: 313px;
+  margin-top: 48px;
+
 }
 
 
@@ -561,10 +599,26 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  display: none;
+
+  @media (min-width:1280px) {
+    display: flex;
+    width: 313px;
+  }
 }
 
+.logo-text2 {
+  @media (min-width:1280px){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: self-start;;
+    gap: 20px;
 
-.socialsIcons {
+  }
+}
+
+.socialIcons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -579,7 +633,11 @@ button:hover {
   justify-content: flex-start;
   align-items: center;
   gap: 32px;
-  border: 2px solid gold;
+
+  @media (min-width:1280px) {
+    justify-content: flex-start;
+
+  }
 
 }
 
@@ -587,16 +645,27 @@ button:hover {
   cursor: pointer;
 }
 
-.footerMenu {
+.footerMenuContainer{
+  @media(min-width: 1280px){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+}
 
+.footerMenu {
   display: flex;
   flex-direction:row;
   justify-content: space-around;
   align-items: center;
-  /* padding: 0 20px; */
-  /* margin: 0 0 20px 0; */
   width: 100%;
   box-sizing: border-box;
+
+  @media (min-width:1280px) {
+    padding-top: 12px;
+    width:75%;
+  }
 }
 
 .footerMenu ul {
@@ -623,5 +692,5 @@ button:hover {
 }
 
 .footerMenu li:hover {
-  color: var(--green);
+  color:var(--green);
 }
